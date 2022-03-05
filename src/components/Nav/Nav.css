@@ -1,15 +1,9 @@
 nav {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 10px;
+	display: inline;
+	float: right;
   }
 
-
-
-.logo{
-
-	  max-height: 10%;
-	  float: left;
-	  display: flex;
+Terminal{
+	margin: 1px;
 
 }

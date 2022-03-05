@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
 import Root from '../.././pages/Root.js';
 import Projects from '../.././pages/Projects.js';
 import LinkDiv from '../.././pages/LinkDiv.js';
@@ -9,23 +9,23 @@ import Terminal from 'react-hackterm';
 const Nav = () => (
 	<nav>
 		<Router>
-			<Routes>
+
 				<Route exact path='/'>
-					<Root id='root' />
+					<Root id={Root} />
 				</Route>
-				<Route exact path='/projects'>
-					<Projects id='projects' />
+				<Route exact path='/Projects'>
+					<Projects id={Projects}/>
 				</Route>
-				<Route exact path='/linkDiv'>
-					<LinkDiv />
+				<Route exact path='/LinkDiv'>
+					<LinkDiv id={LinkDiv}/>
 				</Route>
-				<Route exact path='interests'>
-					<Interests id='interests' />
+				<Route exact path='Interests'>
+					<Interests id={Interests} />
 				</Route>
-				<Route exact path='/about'>
-					<About id='about' />
+				<Route exact path='/About'>
+					<About id={About} />
 				</Route>
-			</Routes>
+
 
 			<Terminal
 				config={{
@@ -44,7 +44,7 @@ const Nav = () => (
 						name: 'pwd',
 						description: 'Print working directory',
 						value: `React.useEffect(
-							useLocation(location, Location),
+							useLocation(location, Location)
 							console.log({ location })`,
 						id: { Location },
 					},
@@ -59,31 +59,31 @@ const Nav = () => (
 						name: 'cd /',
 						description: 'change directory: /root ',
 						value: '/',
-						id: 'root',
+						id: { Root },
 					}, //would love to just use and [array] of the routes
 					{
 						name: 'cd /projects',
 						description: 'change directory: /projects',
 						value: '/projects',
-						id: 'projects',
+						id: Projects,
 					},
 					{
 						name: 'cd /links',
 						description: 'change directory: /links',
 						value: '/links',
-						id: 'links',
+						id: LinkDiv,
 					},
 					{
 						name: 'cd /interests',
 						description: 'change directory: /interests',
 						value: '/interests',
-						id: 'interests',
+						id: Interests,
 					},
 					{
 						name: 'cd /about',
 						description: 'change directory: /about',
 						value: '/about',
-						id: 'about',
+						id: About,
 					},
 				]}
 			/>
