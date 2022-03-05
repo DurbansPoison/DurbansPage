@@ -1,0 +1,15 @@
+nav {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px;
+  }
+
+
+
+.logo{
+
+	  max-height: 10%;
+	  float: left;
+	  display: flex;
+
+}
