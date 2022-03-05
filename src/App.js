@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import Nav from './components/Nav/Nav.js';
 import logo from './logo.svg';
-import css from './App.css';
+import './App.css';
 const App = () => {
 	return (
 		<div className={App}>
